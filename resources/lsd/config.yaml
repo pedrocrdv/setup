@@ -1,0 +1,36 @@
+blocks: # --blocks=permission,size,date,name
+  - permission
+  - size
+  - date
+  - name
+
+classic: false
+
+color:
+  when: never # --color=never
+
+date: "+%Y-%m-%d %H:%M" # --date=+%Y-%m-%d %H:%M
+
+display: almost-all # --almost-all
+
+header: false
+
+hyperlink: always # --hyperlink=always
+
+icons:
+  when: always # --icon=always
+  theme: unicode # --icon-theme=unicode
+
+literal: true # --literal
+
+no-symlink: true # --no-symlink
+
+permission: rwx # --permission=rwx
+
+size: short # --size=short
+
+sorting:
+  column: extension # --sort=extension
+  dir-grouping: first # --group-directories-first
+
+total-size: false

@@ -1,0 +1,50 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = "[$os$directory$git_branch>](fg:#00FFD7) "
+
+add_newline = true
+
+palette = "ansi"
+
+[palettes.ansi]
+black = "0"
+blue = "4"
+cyan = "6"
+green = "2"
+magenta = "5"
+red = "1"
+white = "7"
+yellow = "3"
+
+brblack = "8"
+brblue = "12"
+brcyan = "14"
+brgreen = "10"
+brmagenta = "13"
+brred = "9"
+brwhite = "15"
+bryellow = "11"
+
+[os]
+disabled = false
+format = "$symbol "
+
+[os.symbols]
+Debian = "\uf306"
+Windows = "\ue70f"
+
+[directory]
+disabled = false
+format = "$path[$read_only]($read_only_style) "
+home_symbol = "~"
+read_only = " \uf023"
+read_only_style = "red"
+truncate_to_repo = true
+truncation_length = 3
+truncation_symbol = "../"
+use_os_path_sep = false
+
+[git_branch]
+disabled = false
+format = "[$symbol $branch](fg:#F69A8A) "
+symbol = "\ue725"

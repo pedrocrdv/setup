@@ -1,0 +1,6 @@
+esbenp.prettier-vscode
+ms-toolsai.jupyter-keymap
+ms-vscode-remote.remote-wsl
+ms-vscode.powershell
+tamasfe.even-better-toml
+yzhang.markdown-all-in-one
