@@ -1,0 +1,99 @@
+[
+  // Remove "workbench.action.closeWindow"
+  { "command": "-workbench.action.closeWindow", "key": "ctrl+shift+w" },
+
+  // Remove "workbench.action.terminal"
+  { "command": "-workbench.action.terminal.copyAndClearSelection", "key": "ctrl+c" },
+  { "command": "-workbench.action.terminal.copySelection", "key": "ctrl+shift+c" },
+  { "command": "-workbench.action.terminal.paste", "key": "ctrl+shift+v" },
+  { "command": "-workbench.action.terminal.paste", "key": "ctrl+v" },
+  { "command": "-workbench.action.terminal.sendSequence", "key": "ctrl+v" },
+
+  // Remove "workbench.action.quickOpen"
+  { "command": "-workbench.action.closeQuickOpen", "key": "escape" },
+  { "command": "-workbench.action.closeQuickOpen", "key": "shift+escape" },
+  { "command": "-workbench.action.quickOpen", "key": "ctrl+e" },
+  { "command": "-workbench.action.quickOpen", "key": "ctrl+p" },
+  { "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup", "key": "ctrl+shift+tab" },
+  { "command": "-workbench.action.quickOpenNavigateNextInEditorPicker", "key": "ctrl+tab" },
+  { "command": "-workbench.action.quickOpenNavigateNextInFilePicker", "key": "ctrl+e" },
+  { "command": "-workbench.action.quickOpenNavigateNextInFilePicker", "key": "ctrl+p" },
+  { "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker", "key": "ctrl+r" },
+  { "command": "-workbench.action.quickOpenNavigateNextInViewPicker", "key": "ctrl+q" },
+  { "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker", "key": "ctrl+shift+tab" },
+  { "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker", "key": "ctrl+shift+e" },
+  { "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker", "key": "ctrl+shift+p" },
+  { "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker", "key": "ctrl+shift+r" },
+  { "command": "-workbench.action.quickOpenNavigatePreviousInViewPicker", "key": "ctrl+shift+q" },
+  { "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup", "key": "ctrl+tab" },
+  { "command": "-workbench.action.quickOpenView", "key": "ctrl+q" },
+
+  // Remove "markdown.extension" from yzhang.markdown-all-in-one
+  { "key": "alt+c", "command": "-markdown.extension.checkTaskList" },
+  { "key": "alt+down", "command": "-markdown.extension.onMoveLineDown" },
+  { "key": "alt+s", "command": "-markdown.extension.editing.toggleStrikethrough" },
+  { "key": "alt+up", "command": "-markdown.extension.onMoveLineUp" },
+  { "key": "backspace", "command": "-markdown.extension.onBackspaceKey" },
+  { "key": "ctrl+b", "command": "-markdown.extension.editing.toggleBold" },
+  { "key": "ctrl+enter", "command": "-markdown.extension.onCtrlEnterKey" },
+  { "key": "ctrl+i", "command": "-markdown.extension.editing.toggleItalic" },
+  { "key": "ctrl+k v", "command": "-markdown.extension.closePreview" },
+  { "key": "ctrl+m", "command": "-markdown.extension.editing.toggleMath" },
+  { "key": "ctrl+oem_4", "command": "-markdown.extension.onOutdentLines" },
+  { "key": "ctrl+oem_6", "command": "-markdown.extension.onIndentLines" },
+  { "key": "ctrl+shift+oem_4", "command": "-markdown.extension.editing.toggleHeadingDown" },
+  { "key": "ctrl+shift+oem_6", "command": "-markdown.extension.editing.toggleHeadingUp" },
+  { "key": "ctrl+shift+v", "command": "-markdown.extension.closePreview" },
+  { "key": "ctrl+v", "command": "-markdown.extension.editing.paste" },
+  { "key": "enter", "command": "-markdown.extension.onEnterKey" },
+  { "key": "shift+alt+down", "command": "-markdown.extension.onCopyLineDown" },
+  { "key": "shift+alt+up", "command": "-markdown.extension.onCopyLineUp" },
+  { "key": "shift+enter", "command": "-markdown.extension.onShiftEnterKey" },
+  { "key": "shift+tab", "command": "-markdown.extension.onShiftTabKey" },
+  { "key": "tab", "command": "-markdown.extension.onTabKey" },
+
+  // Cursor move
+  { "command": "cursorMove", "key": "ctrl+down", "when": "editorTextFocus", "args": { "to": "down", "by": "line", "value": 10 } },
+  { "command": "cursorMove", "key": "ctrl+up", "when": "editorTextFocus", "args": { "to": "up", "by": "line", "value": 10 } },
+
+  // File explorer: one letter shortcuts
+  { "command": "-deleteFile", "key": "delete" },
+  { "command": "-deleteFile", "key": "shift+delete" },
+  { "command": "-filesExplorer.copy", "key": "ctrl+c" },
+  { "command": "-filesExplorer.cut", "key": "ctrl+x" },
+  { "command": "-filesExplorer.paste", "key": "ctrl+v" },
+  { "command": "-renameFile", "key": "f2" },
+
+  { "command": "deleteFile", "key": "d", "when": "filesExplorerFocus && !inputFocus" },
+  { "command": "explorer.newFile", "key": "n", "when": "filesExplorerFocus && !inputFocus" },
+  { "command": "filesExplorer.copy", "key": "c", "when": "filesExplorerFocus && !inputFocus" },
+  { "command": "filesExplorer.cut", "key": "x", "when": "filesExplorerFocus && !inputFocus" },
+  { "command": "filesExplorer.paste", "key": "v", "when": "filesExplorerFocus && !inputFocus" },
+  { "command": "renameFile", "key": "r", "when": "filesExplorerFocus && !inputFocus" },
+
+  // Editor: sort lines
+  { "command": "editor.action.sortLinesAscending", "key": "alt+a", "when": "editorTextFocus && !editorReadonly" },
+
+  // Editor: delete lines
+  { "command": "editor.action.deleteLines", "key": "alt+d", "when": "editorTextFocus && !editorReadonly" },
+
+  // Workbench: navigate to previous or next recently used editor in group
+  { "command": "-workbench.action.navigateBack", "key": "alt+left", "when": "canNavigateBack" },
+  { "command": "-workbench.action.navigateForward", "key": "alt+right", "when": "canNavigateForward" },
+  { "command": "workbench.action.openNextRecentlyUsedEditorInGroup", "key": "alt+right", "when": "editorFocus" },
+  { "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup", "key": "alt+left", "when": "editorFocus" },
+
+  // Workbench: open command palette
+  { "command": "-workbench.action.showCommands", "key": "ctrl+shift+p" },
+  { "command": "workbench.action.showCommands", "key": "ctrl+p" },
+
+  // Workbench: quick open
+  { "command": "workbench.action.quickOpen", "key": "ctrl+tab" },
+  { "command": "workbench.action.quickOpenNavigateNext", "key": "ctrl+tab", "when": "inQuickOpen" },
+
+  // Workbench: scroll up and down through the terminal
+  { "command": "-workbench.action.terminal.scrollDownPage", "key": "shift+pagedown", "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive" },
+  { "command": "-workbench.action.terminal.scrollUpPage", "key": "shift+pageup", "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive" },
+  { "command": "workbench.action.terminal.scrollDown", "key": "shift+down", "when": "terminalFocus" },
+  { "command": "workbench.action.terminal.scrollUp", "key": "shift+up", "when": "terminalFocus" }
+]

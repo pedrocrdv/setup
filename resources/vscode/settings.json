@@ -1,0 +1,211 @@
+{
+  // breadcumbs
+  "breadcrumbs.enabled": false,
+
+  // chat
+  "chat.commandCenter.enabled": false,
+
+  // editor
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.comments.insertSpace": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
+  "editor.fontFamily": "'CommitMono Nerd Font'",
+  "editor.fontSize": 14,
+  "editor.hover.enabled": true,
+  "editor.lineHeight": 28,
+  "editor.minimap.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [ 100 ],
+  "editor.smoothScrolling": true,
+  "editor.colorDecorators": false,
+  "editor.folding": false,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "á": true,
+    "Á": true,
+    "à": true,
+    "À": true,
+    "â": true,
+    "Â": true,
+    "ã": true,
+    "Ã": true,
+    "ç": true,
+    "Ç": true,
+    "é": true,
+    "É": true,
+    "è": true,
+    "È": true,
+    "ê": true,
+    "Ê": true,
+    "í": true,
+    "Í": true,
+    "ì": true,
+    "Ì": true,
+    "î": true,
+    "Î": true,
+    "ó": true,
+    "Ó": true,
+    "ò": true,
+    "Ò": true,
+    "ô": true,
+    "Ô": true,
+    "õ": true,
+    "Õ": true,
+    "ú": true,
+    "Ú": true,
+    "ù": true,
+    "Ù": true,
+    "û": true,
+    "Û": true
+  },
+  "editor.unicodeHighlight.nonBasicASCII": true,
+
+  // explorer
+  "explorer.autoOpenDroppedFile": false,
+  "explorer.autoReveal": false,
+  "explorer.compactFolders": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.enableDragAndDrop": true,
+  "explorer.excludeGitIgnore": true,
+  "explorer.sortOrder": "type",
+  "explorer.sortOrderLexicographicOptions": "upper",
+
+  // extensions
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.closeExtensionDetailsOnViewChange": true,
+  "extensions.ignoreRecommendations": true,
+
+  // files
+  "files.associations": { "*.json": "jsonc" },
+  "files.autoSave": "off",
+  "files.autoSaveWorkspaceFilesOnly": true,
+  "files.enableTrash": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+
+  // json
+  "json.format.keepLines": true,
+
+  // notebook
+  "notebook.cellFocusIndicator": "gutter",
+  "notebook.codeActionsOnSave": { "notebook.source.organizeImports": "explicit" },
+  "notebook.compactView": true,
+  "notebook.confirmDeleteRunningCell": false,
+  "notebook.defaultFormatter": "charliermarsh.ruff",
+  "notebook.dragAndDropEnabled": false,
+  "notebook.globalToolbar": false,
+  "notebook.insertFinalNewline": false,
+  "notebook.output.scrolling": true,
+  "notebook.output.textLineLimit": 100,
+  "notebook.output.wordWrap": false,
+
+  // remote
+  "remote.autoForwardPortsSource": "hybrid",
+
+  // security
+  "security.allowedUNCHosts": [ "wsl.localhost" ],
+  "security.workspace.trust.enabled": false,
+
+  // terminal
+  "terminal.integrated.confirmOnExit": "never",
+  "terminal.integrated.confirmOnKill": "never",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.defaultProfile.linux": "Fish",
+  "terminal.integrated.defaultProfile.windows": "PowerShell 7",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.fontFamily": "'CommitMono Nerd Font'",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.smoothScrolling": true,
+
+  "terminal.integrated.profiles.linux": {
+    "Fish": {
+      "path": "/usr/bin/fish",
+      "args": [ ],
+      "icon": "terminal",
+      "overrideName": true
+    }
+  },
+
+  "terminal.integrated.profiles.windows": {
+    "PowerShell 7": {
+      "path": "pwsh.exe",
+      "args": [ "-Interactive", "-NoLogo" ],
+      "icon": "terminal",
+      "overrideName": true
+    }
+  },
+
+  // window
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "compact",
+  "window.newWindowDimensions": "maximized",
+  "window.restoreWindows": "none",
+
+  // workbench
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.navigationScope": "editor",
+  "workbench.editor.showTabs": "none",
+  "workbench.iconTheme": "vs-minimal",
+  "workbench.list.smoothScrolling": true,
+  "workbench.panel.opensMaximized": "always",
+  "workbench.settings.editor": "json",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+
+  "[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
+
+  "[jsonc]": { "editor.defaultFormatter": "vscode.json-language-features" },
+
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  "[python]": {
+    "editor.codeActionsOnSave": { "source.organizeImports": "explicit" },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+
+  // charliermarsh.ruff
+  "ruff.importStrategy": "useBundled",
+  "ruff.lineLength": 99,
+  "ruff.nativeServer": "on",
+  "ruff.organizeImports": true,
+
+  // ms-python.python
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "python.analysis.gotoDefinitionInStringLiteral": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "python.terminal.activateEnvironment": false,
+
+  // ms-toolsai.jupyter
+  "jupyter.askForKernelRestart": false,
+  "jupyter.disableJupyterAutoStart": true,
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+
+  // ms-vscode.powershell
+  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.integratedConsole.suppressStartupBanner": true,
+  "powershell.powerShellAdditionalExePaths": { "PowerShell 7": "C:\\Program Files\\PowerShell\\7\\pwsh.exe" },
+  "powershell.powerShellDefaultVersion": "PowerShell 7",
+
+  // yzhang.markdown-all-in-one
+  "markdown.extension.italic.indicator": "_",
+  "markdown.extension.orderedList.autoRenumber": true,
+  "markdown.extension.tableFormatter.enabled": false,
+  "markdown.extension.toc.levels": "2..6",
+  "markdown.extension.toc.orderedList": false,
+  "markdown.extension.toc.slugifyMode": "github",
+  "markdown.extension.toc.updateOnSave": true,
+}

@@ -1,0 +1,82 @@
+[colors.bright]
+black = "#1A1A1A"
+blue = "#649EFF"
+cyan = "#64F2FF"
+green = "#64FF8B"
+magenta = "#FF78DA"
+red = "#FF6471"
+white = "#FFFFFF"
+yellow = "#FFFF5E"
+
+[colors.cursor]
+cursor = '#BBBBBB'
+text = '#FFFFFF'
+
+[colors.normal]
+black = "#000000"
+blue = "#337FFF"
+cyan = "#33EEFF"
+green = "#33FF66"
+magenta = "#FF44CC"
+red = "#FF3344"
+white = "#F2F2F2"
+yellow = "#FFFF33"
+
+[colors.primary]
+background = '#0D0D0D'
+foreground = '#FFFFFF'
+
+[colors.selection]
+background = "#1E90FF"
+text = "#FFFFFF"
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+
+[font]
+normal = { family = "CommitMono Nerd Font" }
+offset.y = 8
+size = 14
+
+[general]
+live_config_reload = false
+
+[[hints.enabled]]
+action = "Copy"
+hyperlinks = false
+mouse = { mods = "Control", enabled = true }
+post_processing = true
+regex = "https?:\u002F\u002F[a-zA-Z0-9\u0021\u0023\u0025\u0026\u002B\u002D\u002E\u002F\u003A\u003D\u003F\u0040\u005F\u007E]+"
+
+[keyboard]
+bindings = [
+    # Disable "ToggleViMode"
+    { mode = "~Alt", mods = "Control|Shift", key = "Space", action = "None" },
+    # Disable "Ctrl + Shift + C"
+    { mode = "~Alt", mods = "Control|Shift", key = "C", action = "None" },
+    # Disable "Ctrl + Shift + V"
+    { mode = "~Alt", mods = "Control|Shift", key = "V", action = "None" },
+    # Enable "Shift + ArrowUp or ArrowDown"
+    { mode = "~Alt", mods = "Shift", key = "ArrowUp", action = "ScrollLineUp" },
+    { mode = "~Alt", mods = "Shift", key = "ArrowDown", action = "ScrollLineDown" },
+    # Enable "Ctrl + Shift + N"
+    { mode = "~Alt", mods = "Control|Shift", key = "N", action = "SpawnNewInstance" },
+]
+
+[mouse]
+bindings = [{ mouse = "Right", mods = "Control", action = "Paste" }]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+
+[terminal]
+shell = { program = "pwsh", args = ["-Interactive", "-NoLogo"] }
+
+[window]
+decorations = "Full"
+dimensions = { columns = 120, lines = 25 }
+dynamic_title = false
+padding = { x = 12, y = 4 }
+position = { x = 10, y = 10 }
+startup_mode = "Windowed"
