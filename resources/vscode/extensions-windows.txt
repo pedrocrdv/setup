@@ -1,0 +1,4 @@
+esbenp.prettier-vscode
+ms-vscode-remote.remote-wsl
+ms-vscode.powershell
+tamasfe.even-better-toml

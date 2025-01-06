@@ -1,0 +1,66 @@
+[colors.bright]
+black = "#1A1A1A"
+blue = "#649EFF"
+cyan = "#64F2FF"
+green = "#64FF8B"
+magenta = "#FF78DA"
+red = "#FF6471"
+white = "#FFFFFF"
+yellow = "#FFFF5E"
+
+[colors.cursor]
+text = '#FFFFFF'
+cursor = '#BBBBBB'
+
+[colors.normal]
+black = "#000000"
+blue = "#337FFF"
+cyan = "#33EEFF"
+green = "#33FF66"
+magenta = "#FF44CC"
+red = "#FF3344"
+white = "#F2F2F2"
+yellow = "#FFFF33"
+
+[colors.primary]
+background = '#0D0D0D'
+foreground = '#FFFFFF'
+
+[colors.selection]
+text = "#FFFFFF"
+background = "#1E90FF"
+
+[cursor]
+style = { shape = "beam", blinking = "on" }
+
+[font]
+normal = { family = "CommitMono Nerd Font" }
+offset.y = 12
+size = 14
+
+[general]
+live_config_reload = false
+[keyboard]
+bindings = [
+    # Disable "ToggleViMode"
+    { mode = "~Search", mods = "Control|Shift", key = "Space", action = "None" },
+    # Enable "Ctrl + Shift + ArrowUp or ArrowDown"
+    { mode = "~Alt", mods = "Control|Shift", key = "ArrowUp", action = "ScrollLineUp" },
+    { mode = "~Alt", mods = "Control|Shift", key = "ArrowDown", action = "ScrollLineDown" },
+    # Enable "Ctrl + Shift + N"
+    { mode = "~Alt", mods = "Control|Shift", key = "N", action = "SpawnNewInstance" },
+    # Disable "Ctrl + Shift + V"
+    { mode = "~Alt", mods = "Control|Shift", key = "V", action = "None" },
+]
+
+[mouse]
+hide_when_typing = true
+
+[terminal]
+shell = { program = "pwsh", args = ["-Interactive", "-NoLogo"] }
+
+[window]
+padding.x = 12
+decorations = "full"
+startup_mode = "maximized"
+dynamic_title = false

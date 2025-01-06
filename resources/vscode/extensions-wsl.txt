@@ -1,0 +1,14 @@
+charliermarsh.ruff
+esbenp.prettier-vscode
+humao.rest-client
+ms-python.black-formatter
+ms-python.isort
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
+ms-vscode-remote.remote-wsl
+tamasfe.even-better-toml
