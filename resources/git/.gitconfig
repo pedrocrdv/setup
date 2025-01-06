@@ -1,0 +1,24 @@
+[core]
+	autocrlf = input
+	bigFileThreshold = 10m
+	commitGraph = true
+	editor = code --wait
+	eol = lf
+	fileMode = false
+
+[init]
+	defaultBranch = main
+
+[log]
+	date = format:%Y-%m-%d %H:%M
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	default = simple
+
+[user]
+	name = Pedro Cardo Vasconcellos
+	email = pedro.cardo.vasconcellos@gmail.com
