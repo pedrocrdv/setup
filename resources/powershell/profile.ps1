@@ -19,10 +19,6 @@ function Enter-WSLDebianFish {
     Enter-WSLDebian -ShellPath "/usr/bin/fish"
 }
 
-function Enter-WSLDebianNushell {
-    Enter-WSLDebian -ShellPath "/home/linuxbrew/.linuxbrew/bin/nu"
-}
-
 function Get-ImAdministrator {
     $WindowsIdentity = [Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()
     $WindowsAdministratorRole = [Security.Principal.WindowsBuiltInRole]::Administrator
