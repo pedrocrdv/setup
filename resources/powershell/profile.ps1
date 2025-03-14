@@ -166,13 +166,6 @@ function Remove-Junk {
     }
 }
 
-function Start-AlacrittyPowerShellAsAdministrator {
-    Start-Process `
-        -FilePath "alacritty" `
-        -ArgumentList @("--title", "Alacritty(Administrator)") `
-        -Verb "RunAs"
-}
-
 function Start-MouseMovement {
     param (
         [Parameter(Mandatory = $false)]
@@ -238,7 +231,6 @@ Set-Alias -Name "junk" -Value Remove-Junk
 Set-Alias -Name "ll" -Value Invoke-LSDeluxe
 Set-Alias -Name "mouse" -Value Start-MouseMovement
 Set-Alias -Name "pp" -Value Get-PathEntries
-Set-Alias -Name "sudo" -Value Start-AlacrittyPowerShellAsAdministrator
 
 
 if (Get-Module -Name "PSReadLine") {

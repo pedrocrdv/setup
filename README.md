@@ -35,7 +35,6 @@ Os comandos deste documento foram escritos para serem executados com o [PowerShe
 Os principais _softwares_ instalados com as instruções deste repositório são:
 
 - [`7z`](https://7-zip.org)
-- [`alacritty`](https://github.com/alacritty/alacritty)
 - [`bat`](https://github.com/sharkdp/bat)
 - [`brew`](https://github.com/Homebrew/brew)
 - [`carapace`](https://github.com/carapace-sh/carapace)
@@ -68,10 +67,6 @@ Inicie o PowerShell como administrador e instale os _softwares_ especificados ab
 > Os comandos abaixo foram escritos como estão para que seja possível executá-los individualmente.
 
 ```powershell
-winget install --source "winget" --scope "machine" --id "Microsoft.VCRedist.2015+.x64"
-winget install --source "winget" --scope "machine" --id "Microsoft.VCRedist.2015+.x86"
-winget install --source "winget" --scope "machine" --id "7zip.7zip"
-winget install --source "winget" --scope "machine" --id "Alacritty.Alacritty"
 winget install --source "winget" --scope "machine" --id "Git.Git" --override '/VERYSILENT /NODESKTOPICON /NOEXPLORER /COMPONENTS="icons,gitlfs" /NOASSOC /NOSCALAR /PATH'
 winget install --source "winget" --scope "machine" --id "GitHub.cli"
 winget install --source "winget" --scope "machine" --id "Google.Chrome"
