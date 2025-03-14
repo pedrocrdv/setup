@@ -1,3 +1,37 @@
+function Enter-VisualStudioCodeWSLDebian {
+    param (
+        [Parameter(Mandatory = $false)]
+        [string]$Path = $null
+    )
+    $ErrorActionPreference = "Stop"
+
+    $Arguments = @("--remote", "wsl+Debian")
+
+    if ($Path) {
+        if ($Path -match '^~') {
+            $Path = $Path -replace '^~', "/home/$($Env:USERNAME.ToLower())"
+        }
+
+        if ($Path -notmatch '/$') {
+            $Path += '/'
+        }
+
+        $StringTrue = "yes"
+        $Command = "wsl --distribution Debian --exec /usr/bin/bash -c 'test -d $Path && echo $StringTrue'"
+
+        $Result = Invoke-Expression -Command $Command
+
+        if ($Result -eq $StringTrue) {
+            $Arguments += ($Path)
+        } else {
+            throw "$Path does not exist."
+        }
+
+    }
+
+    & "code" $Arguments
+}
+
 function Enter-WSLDebian {
     param (
         [Parameter(Mandatory = $false)]
@@ -220,6 +254,7 @@ function Start-MouseMovement {
 
 
 Set-Alias -Name "c" -Value Clear-Host
+Set-Alias -Name "coder" -Value Enter-VisualStudioCodeWSLDebian
 Set-Alias -Name "deb" -Value Enter-WSLDebianFish
 Set-Alias -Name "ip" -Value Set-ClipboardToIPAddress
 Set-Alias -Name "isudo" -Value Get-ImAdministrator
