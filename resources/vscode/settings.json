@@ -125,7 +125,6 @@
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.fontFamily": "'CommitMono Nerd Font'",
   "terminal.integrated.fontSize": 16,
-  "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.lineHeight": 1.5,
   "terminal.integrated.smoothScrolling": true,
 
