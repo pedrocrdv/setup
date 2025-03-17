@@ -100,6 +100,7 @@ function Remove-Junk {
 
     $JunkItems = @(
         "$Env:APPDATA\Adobe"
+        "$Env:APPDATA\VoiceAccess"
         "$Env:LOCALAPPDATA\Activision\bootstrapper\crash_reports"
         "$Env:LOCALAPPDATA\Activision\Call of Duty\crash_reports"
         "$Env:LOCALAPPDATA\cache"
@@ -136,12 +137,14 @@ function Remove-Junk {
     ) | Get-ChildItem
 
     $CacheAndLogsDirectories = @(
+        "$Env:LOCALAPPDATA\app.yaak.desktop\"
         "$Env:LOCALAPPDATA\Battle.net\"
         "$Env:LOCALAPPDATA\EADesktop\"
         "$Env:LOCALAPPDATA\EALaunchHelper\"
         "$Env:LOCALAPPDATA\Electronic Arts\"
         "$Env:LOCALAPPDATA\Microsoft\OneDrive\"
         "$Env:LOCALAPPDATA\Microsoft\Teams\"
+        "$Env:LOCALAPPDATA\OneDrive"
         "$Env:LOCALAPPDATA\Origin\"
         "$Env:LOCALAPPDATA\Steam\"
     ) | Get-ChildItem -Recurse -Directory | Where-Object { $_.Name -match 'cache|log' }
