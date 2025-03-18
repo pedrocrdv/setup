@@ -4,7 +4,7 @@ $ErrorActionPreference = "Stop"
 $PathConfigurationFile = "$Env:USERPROFILE\.wslconfig"
 
 Remove-Item `
-    -Path $PathConfigurationFile`
+    -Path $PathConfigurationFile `
     -Force `
     -ErrorAction "SilentlyContinue"
 

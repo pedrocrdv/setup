@@ -1,13 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 
-$PathConfigurationDirectory = "$Env:APPDATA\git"
-$PathConfigurationFile = Join-Path -Path $PathConfigurationDirectory -ChildPath ".gitconfig"
-
-New-Item `
-    -Path $PathConfigurationDirectory `
-    -ItemType "Directory" `
-    -Force
+$PathConfigurationFile = "$Env:USERPROFILE\.gitconfig"
 
 Remove-Item `
     -Path $PathConfigurationFile `
