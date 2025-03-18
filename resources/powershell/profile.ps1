@@ -242,9 +242,9 @@ if (Get-Module -Name "PSReadLine") {
         Keyword          = "`e[95m" # ANSI magenta bright
         Member           = "`e[97m" # ANSI white bright
         Number           = "`e[92m" # ANSI green bright
-        Operator         = "`e[97m" # ANSI white bright
+        Operator         = "`e[95m" # ANSI magenta bright
         Parameter        = "`e[97m" # ANSI white bright
-        String           = "`e[93m" # ANSI yellow bright
+        String           = "`e[32m" # ANSI green
         Type             = "`e[97m" # ANSI white bright
         Variable         = "`e[96m" # ANSI cyan bright
     }
