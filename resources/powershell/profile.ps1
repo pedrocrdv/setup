@@ -222,7 +222,6 @@ function Start-MouseMovement {
 }
 
 
-Set-Alias -Name "c" -Value Clear-Host
 Set-Alias -Name "deb" -Value Enter-WSLDebianFish
 Set-Alias -Name "ip" -Value Set-ClipboardToIPAddress
 Set-Alias -Name "isudo" -Value Get-ImAdministrator
