@@ -1,7 +1,7 @@
 [alias]
 	am = commit --amend --no-edit
 
-	l = log --graph --format=\"%C(brightmagenta)%h %C(brightgreen)%ad %C(white)%s %C(brightblue)<%ae> %C(brightyellow)%d\" --date=format:\"%Y-%m-%d %H:%M\"
+	l = log --format=\"%C(brightmagenta)%h %C(brightgreen)%ad %C(white)%s %C(brightblue)<%ae> %C(brightyellow)%d\" --date=format:\"%Y-%m-%d %H:%M\"
 
 [advice]
 	addIgnoredFile = false
