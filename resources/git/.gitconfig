@@ -1,21 +1,27 @@
+[alias]
+	am = commit --amend --no-edit
+
+	l = log --graph --format=\"%C(brightmagenta)%h %C(brightgreen)%ad %C(white)%s %C(brightblue)<%ae> %C(brightyellow)%d\" --date=format:\"%Y-%m-%d %H:%M\"
+
 [advice]
 	addIgnoredFile = false
 
 [core]
-	autocrlf = input
 	bigFileThreshold = 10m
-	commitGraph = true
 	editor = code --wait
 	eol = lf
-	fileMode = false
+
+[fetch]
+  prune = true
+
+[gc]
+  auto = 256
 
 [init]
 	defaultBranch = main
 
-[log]
-	date = format:%Y-%m-%d %H:%M
-
 [pull]
+	ff = only
 	rebase = true
 
 [push]
