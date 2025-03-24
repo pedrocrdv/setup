@@ -104,13 +104,14 @@ function Remove-Junk {
         "$Env:LOCALAPPDATA\Activision\bootstrapper\crash_reports"
         "$Env:LOCALAPPDATA\Activision\Call of Duty\crash_reports"
         "$Env:LOCALAPPDATA\cache"
-        "$Env:LOCALAPPDATA\calibre-cache"
         "$Env:LOCALAPPDATA\CEF"
         "$Env:LOCALAPPDATA\Comms"
         "$Env:LOCALAPPDATA\ConnectedDevicesPlatform"
         "$Env:LOCALAPPDATA\CrashDumps"
         "$Env:LOCALAPPDATA\D3DSCache"
         "$Env:LOCALAPPDATA\IconCache.db"
+        "$Env:LOCALAPPDATA\NVIDIA Corporation"
+        "$Env:LOCALAPPDATA\NVIDIA"
         "$Env:LOCALAPPDATA\PeerDistRepub"
         "$Env:LOCALAPPDATA\PlaceholderTileLogoFolder"
         "$Env:LOCALAPPDATA\Programs"
@@ -136,9 +137,10 @@ function Remove-Junk {
         "$Env:USERPROFILE\Videos\"
     ) | Get-ChildItem
 
-    $CacheAndLogsDirectories = @(
+    $CacheAndLogsParentDirectories = @(
         "$Env:LOCALAPPDATA\app.yaak.desktop\"
         "$Env:LOCALAPPDATA\Battle.net\"
+        "$Env:LOCALAPPDATA\Blizzard Entertainment"
         "$Env:LOCALAPPDATA\EADesktop\"
         "$Env:LOCALAPPDATA\EALaunchHelper\"
         "$Env:LOCALAPPDATA\Electronic Arts\"
