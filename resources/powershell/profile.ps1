@@ -147,7 +147,9 @@ function Remove-Junk {
         "$Env:LOCALAPPDATA\OneDrive"
         "$Env:LOCALAPPDATA\Origin\"
         "$Env:LOCALAPPDATA\Steam\"
-    ) | Get-ChildItem -Recurse -Directory | Where-Object { $_.Name -match 'cache|log' }
+    )
+
+    $CacheAndLogsDirectories = Get-ChildItem -Path $CacheAndLogsParentDirectories -Recurse -Directory | Where-Object { $_.Name -match 'cache|log' }
 
     $Items = $JunkItems + $JunkDirectoriesItems + $CacheAndLogsDirectories
 
