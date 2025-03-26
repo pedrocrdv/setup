@@ -5,7 +5,6 @@ function junk
         $HOME/.cache/
         $HOME/.dagster/
         $HOME/.dotnet/
-        $HOME/.gitconfig
         $HOME/.ipython
         $HOME/.lesshst
         $HOME/.psql_history
