@@ -215,7 +215,7 @@
 
   // charliermarsh.ruff
   "ruff.importStrategy": "useBundled",
-  "ruff.lineLength": 99,
+  "ruff.lineLength": 100,
   "ruff.nativeServer": "on",
   "ruff.organizeImports": true,
 
