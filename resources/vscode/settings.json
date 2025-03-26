@@ -155,6 +155,7 @@
 
   // workbench
   "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Default Dark Modern",
   "workbench.editor.navigationScope": "editor",
   "workbench.editor.showTabs": "none",
   "workbench.iconTheme": "vs-minimal",
@@ -164,6 +165,41 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": false,
+
+  "workbench.colorCustomizations": {
+    "terminal.background": "#0D0D0D",
+    "terminal.foreground": "#FFFFFF",
+
+    "terminal.selectionBackground": "#1E90FF",
+    "terminal.selectionForeground": "#FFFFFF",
+
+    "terminalCursor.foreground": "#BBBBBB",
+
+    // ANSI colors
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiBrightBlack": "#1A1A1A",
+
+    "terminal.ansiBlue": "#337FFF",
+    "terminal.ansiBrightBlue": "#649EFF",
+
+    "terminal.ansiCyan": "#33EEFF",
+    "terminal.ansiBrightCyan": "#64F2FF",
+
+    "terminal.ansiGreen": "#33FF66",
+    "terminal.ansiBrightGreen": "#64FF8B",
+
+    "terminal.ansiMagenta": "#FF44CC",
+    "terminal.ansiBrightMagenta": "#FF78DA",
+
+    "terminal.ansiRed": "#FF3344",
+    "terminal.ansiBrightRed": "#FF6471",
+
+    "terminal.ansiWhite": "#F2F2F2",
+    "terminal.ansiBrightWhite": "#FFFFFF",
+
+    "terminal.ansiYellow": "#FFFF33",
+    "terminal.ansiBrightYellow": "#FFFF5E"
+  },
 
   "[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
 
