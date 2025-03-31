@@ -161,8 +161,8 @@ sudo install --mode="0755" --directory "/etc/apt/keyrings/"
 Baixe e converta as chaves GPG especificadas abaixo, salvando-as no diretório `/etc/apt/keyrings/`.
 
 ```bash
-sudo curl --fail "https://packages.cloud.google.com/apt/doc/apt-key.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/cloud.google.gpg"
-sudo curl --fail "https://cli.github.com/packages/githubcli-archive-keyring.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/githubcli-archive-keyring.gpg"
+sudo curl --fail "https://packages.cloud.google.com/apt/doc/apt-key.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gcloud.gpg"
+sudo curl --fail "https://cli.github.com/packages/githubcli-archive-keyring.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gh.gpg"
 ```
 
 Adicione os repositórios especificados abaixo como fontes de pacotes para o `apt`.
@@ -170,8 +170,8 @@ Adicione os repositórios especificados abaixo como fontes de pacotes para o `ap
 Em seguida, com as novas fontes, sincronize os índices de pacotes.
 
 ```bash
-echo "deb [signed-by=/etc/apt/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee "/etc/apt/sources.list.d/google-cloud-sdk.list" > /dev/null
-echo "deb [signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg arch=amd64] https://cli.github.com/packages stable main" | sudo tee "/etc/apt/sources.list.d/github-cli.list" > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/gcloud.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee "/etc/apt/sources.list.d/google-cloud-sdk.list" > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/gh.gpg arch=amd64] https://cli.github.com/packages stable main" | sudo tee "/etc/apt/sources.list.d/github-cli.list" > /dev/null
 
 sudo apt update
 ```
