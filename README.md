@@ -40,6 +40,7 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`carapace`](https://github.com/carapace-sh/carapace)
 - [`chrome`](https://www.google.com/chrome)
 - [`code`](https://code.visualstudio.com)
+- [`docker`](https://docs.docker.com/engine)
 - [`fish`](https://github.com/fish-shell/fish-shell)
 - [`gcloud`](https://cloud.google.com/sdk/docs/install)
 - [`gh`](https://github.com/cli/cli)
@@ -161,6 +162,7 @@ sudo install --mode="0755" --directory "/etc/apt/keyrings/"
 Baixe e converta as chaves GPG especificadas abaixo, salvando-as no diretório `/etc/apt/keyrings/`.
 
 ```bash
+sudo curl --fail "https://download.docker.com/linux/debian/gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/docker.gpg"
 sudo curl --fail "https://packages.cloud.google.com/apt/doc/apt-key.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gcloud.gpg"
 sudo curl --fail "https://cli.github.com/packages/githubcli-archive-keyring.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gh.gpg"
 ```
@@ -170,6 +172,7 @@ Adicione os repositórios especificados abaixo como fontes de pacotes para o `ap
 Em seguida, com as novas fontes, sincronize os índices de pacotes.
 
 ```bash
+echo "deb [signed-by=/etc/apt/keyrings/docker.gpg arch=amd64] https://download.docker.com/linux/debian bookworm stable" | sudo tee "/etc/apt/sources.list.d/docker.list" > /dev/null
 echo "deb [signed-by=/etc/apt/keyrings/gcloud.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee "/etc/apt/sources.list.d/google-cloud-sdk.list" > /dev/null
 echo "deb [signed-by=/etc/apt/keyrings/gh.gpg arch=amd64] https://cli.github.com/packages stable main" | sudo tee "/etc/apt/sources.list.d/github-cli.list" > /dev/null
 
@@ -179,8 +182,15 @@ sudo apt update
 Instale os pacotes especificados abaixo.
 
 ```bash
+sudo apt install --assume-yes "docker-ce" "docker-ce-cli" "containerd.io" "docker-buildx-plugin" "docker-compose-plugin"
 sudo apt install --assume-yes "google-cloud-cli"
 sudo apt install --assume-yes "gh"
+```
+
+Adiciona o usuário referenciado pela variável `$USER` ao grupo `"docker"`.
+
+```bash
+sudo usermod --append --groups "docker" "$USER"
 ```
 
 ##### Manutenção
@@ -193,7 +203,7 @@ Utilize a _flag_ `--upgradable` para listar apenas os pacotes que possuam atuali
 apt list --installed
 
 apt list --upgradable
-```
+````
 
 Execute `apt purge` para remover um pacote especificado.
 
