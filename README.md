@@ -203,7 +203,7 @@ Utilize a _flag_ `--upgradable` para listar apenas os pacotes que possuam atuali
 apt list --installed
 
 apt list --upgradable
-````
+```
 
 Execute `apt purge` para remover um pacote especificado.
 
@@ -362,8 +362,13 @@ Pode ser necessário remover manualmente o diretório `C:\Windows\SoftwareDistri
 Stop-Service -Name "bits" -Force
 Stop-Service -Name "cryptsvc" -Force
 Stop-Service -Name "wuauserv" -Force
-Remove-Item -Path "C:\Windows\SoftwareDistribution\*" -Recurse -Force
-Remove-Item -Path "C:\Windows\System32\catroot2\*" -Recurse -Force
+```
+
+Remova os diretórios `C:\Windows\SoftwareDistribution\` e `C:\Windows\System32\catroot2`, utilizando o File Explorer.
+
+Execute os comandos restantes abaixo.
+
+```bash
 Invoke-Expression -Command "sfc /scannow"
 Invoke-Expression -Command "DISM /Online /Cleanup-Image /RestoreHealth"
 Restart-Computer
