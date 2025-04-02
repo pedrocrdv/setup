@@ -292,13 +292,23 @@ brew uninstall --formula "git"
 
 ## Repositório
 
-Configure o `gh` para clonar esse repositório.
+Configure o `gh`.
 
 ```powershell
 gh auth login --git-protocol="https" --hostname="github.com" --web
 ```
 
-Além desse [`README.md`](README.md), esse repositório possui recursos e _scripts_.
+Clone esse repositório.
+
+> Eu utilizo o diretório `$Env:USERPROFILE/shards/` para salvar repositórios no Windows 11.
+
+```powershell
+New-Item -Path "$Env:USERPROFILE" -Name "shards" -ItemType "Directory" -Force
+
+git clone "https://github.com/pedrocrvs/setup.git" $PathRepository "$Env:USERPROFILE/shards/setup"
+
+Set-Location "$Env:USERPROFILE/shards/setup"; git lfs pull
+```
 
 ### _Resources_
 
