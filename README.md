@@ -375,19 +375,12 @@ Inicie o PowerShell como administrador para executar os comandos desta seção.
 
 Execute os comandos abaixo para tentar solucionar uma atualização mal sucedida do Windows.
 
-Pode ser necessário remover manualmente o diretório `C:\Windows\SoftwareDistribution\` usando o Windows File Explorer.
-
 ```powershell
 Stop-Service -Name "bits" -Force
 Stop-Service -Name "cryptsvc" -Force
 Stop-Service -Name "wuauserv" -Force
-```
-
-Remova os diretórios `C:\Windows\SoftwareDistribution\` e `C:\Windows\System32\catroot2`, utilizando o File Explorer.
-
-Execute os comandos restantes abaixo.
-
-```bash
+Remove-Item -Path "C:\Windows\SoftwareDistribution\" -Recurse -Force
+Remove-Item -Path "C:\Windows\System32\catroot2" -Recurse -Force
 Invoke-Expression -Command "sfc /scannow"
 Invoke-Expression -Command "DISM /Online /Cleanup-Image /RestoreHealth"
 Restart-Computer
