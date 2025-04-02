@@ -82,6 +82,7 @@ winget install --source "winget" --scope "machine" --id "Starship.Starship"
 > Os _softwares_ especificados abaixo são utilizados apenas em meu trabalho profissional.
 
 ```powershell
+winget install --source "winget" --scope "machine" --id "Microsoft.OneDrive"
 winget install --source "winget" --scope "machine" --id "Microsoft.PowerBI"
 winget install --source "winget" --scope "user" --id "Microsoft.Teams"
 ```
