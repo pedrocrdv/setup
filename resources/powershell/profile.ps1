@@ -57,20 +57,49 @@ function Set-ClipboardToIPAddress {
     }
 }
 
-function Invoke-LSDeluxe {
+function Format-ByteSize {
     param (
-        [Parameter(ValueFromRemainingArguments = $true)]
-        [string[]]$Arguments
+        [Parameter(Mandatory)]
+        [ulong]$Bytes
     )
 
-    $DefaultArguments = @(
-        "--depth=1"
-        "--long"
-        "--permission=disable"
-        "--tree"
+    $Units = @("Bytes", "KB", "MB", "GB", "TB")
+
+    $Size = [double]$Bytes
+
+    $Index = 0
+    $IndexMax = $Units.Count - 1
+
+    while ($Size -ge 1024 -and $Index -lt $IndexMax) {
+        $Size /= 1024
+        $Index++
+    }
+
+    $SizeRounded = [math]::Round($Size, 2)
+
+    return "$SizeRounded $($Units[$Index])"
+}
+
+function Invoke-CustomGetChildItem {
+    param (
+        [Parameter(Mandatory = $false)]
+        [string]$Path = "."
     )
 
-    & "lsd" $DefaultArguments $Arguments
+    Get-ChildItem -Path $Path -Force |
+    ForEach-Object {
+        $IsDirectory = $_.PsIsContainer
+
+        [PSCustomObject]@{
+            Name           = if ($IsDirectory) { "$($_.Name)/" } else { $_.Name }
+            Extension      = $_.Extension.ToLowerInvariant()
+            Size           = if ($IsDirectory) { '' } else { Format-ByteSize $_.Length }
+            LastWriteTime  = $_.LastWriteTime.ToString("yyyy-MM-dd HH:mm:ss")
+            IsNotDirectory = -not $IsDirectory
+        }
+    } |
+    Sort-Object -Property IsNotDirectory, Extension, Name |
+    Select-Object -Property Name, Size, LastWriteTime
 }
 
 function Invoke-Starship {
@@ -230,7 +259,7 @@ Set-Alias -Name "deb" -Value Enter-WSLDebianFish
 Set-Alias -Name "ip" -Value Set-ClipboardToIPAddress
 Set-Alias -Name "isudo" -Value Get-ImAdministrator
 Set-Alias -Name "junk" -Value Remove-Junk
-Set-Alias -Name "ll" -Value Invoke-LSDeluxe
+Set-Alias -Name "ll" -Value Invoke-CustomGetChildItem
 Set-Alias -Name "mouse" -Value Start-MouseMovement
 Set-Alias -Name "pp" -Value Get-PathEntries
 
@@ -256,8 +285,6 @@ else {
     Write-Host "PSReadLine was not found" -BackgroundColor "Red"
 }
 
-
-$Env:LS_COLORS = "bd=97:cd=97:di=4;97:ex=97:fi=97:ln=4;97:mi=4;91:or=4;91:ow=97:pi=97:sg=97:so=97:st=97:su=97:tw=97"
 
 $Env:STARSHIP_CACHE = "$Env:APPDATA\starship\"
 

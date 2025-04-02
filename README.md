@@ -74,7 +74,6 @@ winget install --source "winget" --scope "machine" --id "7zip.7zip"
 winget install --source "winget" --scope "machine" --id "Git.Git" --override '/VERYSILENT /NODESKTOPICON /NOEXPLORER /COMPONENTS="icons,gitlfs" /NOASSOC /NOSCALAR /PATH'
 winget install --source "winget" --scope "machine" --id "GitHub.cli"
 winget install --source "winget" --scope "machine" --id "Google.Chrome"
-winget install --source "winget" --scope "machine" --id "lsd-rs.lsd"
 winget install --source "winget" --scope "machine" --id "Microsoft.PowerShell"
 winget install --source "winget" --scope "machine" --id "Microsoft.VisualStudioCode" --override '/VERYSILENT /MERGETASKS="!runcode,!desktopicon,addcontextmenufiles,addcontextmenufolders,associatefiles,path"'
 winget install --source "winget" --scope "machine" --id "Starship.Starship"
