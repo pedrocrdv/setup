@@ -17,11 +17,12 @@ Os comandos deste documento foram escritos para serem executados com o [PowerShe
 - [`winget`](#winget)
   - [Manutenção](#manutenção)
 - [`wsl`](#wsl)
+  - [Manutenção](#manutenção-1)
   - [Debian](#debian)
     - [`apt`](#apt)
-      - [Manutenção](#manutenção-1)
-    - [`brew`](#brew)
       - [Manutenção](#manutenção-2)
+    - [`brew`](#brew)
+      - [Manutenção](#manutenção-3)
 - [Repositório](#repositório)
   - [_Resources_](#resources)
   - [_Scritps_](#scritps)
@@ -116,11 +117,11 @@ winget uninstall --source "winget" --scope "machine" --id "Git.Git" --all-versio
 
 ## `wsl`
 
-Instale ou atualize o `wsl`.
+Instale o `wsl`.
 
 ```powershell
 wsl --install --no-distribution
-wsl --update
+Restart-Computer
 ```
 
 Instale a distribuição Debian no `wsl`.
@@ -133,6 +134,14 @@ Configure a distribuição Debian como padrão do `wsl`.
 
 ```powershell
 wsl --set-default "Debian"
+```
+
+### Manutenção
+
+Execute `wsl --update` para atualizar o WSL.
+
+```powershell
+wsl --update
 ```
 
 ### Debian
