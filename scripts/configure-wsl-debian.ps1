@@ -1,10 +1,12 @@
 $ErrorActionPreference = "Stop"
 
 
+$LinuxUserName = "pedro"
+
 $FileContent = Get-Content "$PSScriptRoot\..\resources\wsl\wsl.conf" -Raw
 
 $Command = @"
-wsl --distribution Debian --exec /usr/bin/bash -c 'sudo tee /etc/wsl.conf <<< "$FileContent"'
+wsl --distribution Debian --user $LinuxUserName --exec /usr/bin/bash -c 'sudo tee /etc/wsl.conf <<< "$FileContent"'
 "@
 
 Invoke-Expression -Command $Command

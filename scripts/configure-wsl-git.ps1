@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 
-$LinuxUserName = $Env:USERNAME.ToLower()
+$LinuxUserName = "pedro"
 
 Copy-Item `
     -Path "$PSScriptRoot\..\resources\git\.gitconfig" `

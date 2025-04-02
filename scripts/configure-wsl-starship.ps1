@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 
-$LinuxUserName = $Env:USERNAME.ToLower()
+$LinuxUserName = "pedro"
 
 Invoke-Expression "wsl --distribution Debian --exec /usr/bin/bash -c 'mkdir ~/.config 2> /dev/null'"
 
