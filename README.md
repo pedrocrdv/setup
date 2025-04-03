@@ -46,7 +46,6 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`gcloud`](https://cloud.google.com/sdk/docs/install)
 - [`gh`](https://github.com/cli/cli)
 - [`git`](https://git-scm.com)
-- [`podman`](https://github.com/containers/podman)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
 - [`starship`](https://github.com/starship/starship)
 - [`terminal`](https://github.com/microsoft/terminal)
@@ -161,7 +160,7 @@ sudo apt update && sudo apt upgrade --assume-yes
 Instale os pacotes especificados abaixo.
 
 ```bash
-sudo apt install --assume-yes "apt-transport-https" "bat" "build-essential" "ca-certificates" "curl" "file" "fish" "git" "gnupg" "podman" "procps" "unzip" "wget" "zip"
+sudo apt install --assume-yes "apt-transport-https" "bat" "build-essential" "ca-certificates" "curl" "file" "fish" "git" "gnupg" "procps" "unzip" "wget" "zip"
 ```
 
 Crie o diretório `/etc/apt/keyrings/` com as permissões `0755`, para armazenar chaves GPG.
