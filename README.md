@@ -49,6 +49,7 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`podman`](https://github.com/containers/podman)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
 - [`starship`](https://github.com/starship/starship)
+- [`terminal`](https://github.com/microsoft/terminal)
 - [`uv`](https://github.com/astral-sh/uv)
 - [`winget`](https://github.com/microsoft/winget-cli)
 - [`wsl`](https://learn.microsoft.com/en-us/windows/wsl)
@@ -70,6 +71,7 @@ Inicie o PowerShell como administrador e instale os _softwares_ especificados ab
 
 ```powershell
 winget install --source "winget" --id "Yaak.app"
+winget install --source "winget" --id "Microsoft.WindowsTerminal"
 winget install --source "winget" --scope "machine" --id "7zip.7zip"
 winget install --source "winget" --scope "machine" --id "Git.Git" --override '/VERYSILENT /NODESKTOPICON /NOEXPLORER /COMPONENTS="icons,gitlfs" /NOASSOC /NOSCALAR /PATH'
 winget install --source "winget" --scope "machine" --id "GitHub.cli"

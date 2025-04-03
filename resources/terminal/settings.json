@@ -1,0 +1,134 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "alwaysShowTabs": false,
+    "confirmCloseAllTabs": false,
+    "copyFormatting": "none",
+    "copyOnSelect": true,
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "disableAnimations": true,
+    "initialCols": 140,
+    "initialPosition": "40,40",
+    "initialRows": 40,
+    "keybindings": [
+        { "keys": "ctrl+shift+w", "id": "" },
+        { "keys": "enter", "id": "" },
+        { "keys": "ctrl+numpad_minus", "id": "" },
+        { "keys": "alt+right", "id": "" },
+        { "keys": "ctrl+shift+f", "id": "" },
+        { "keys": "ctrl+comma", "id": "" },
+        { "keys": "ctrl+insert", "id": "" },
+        { "keys": "ctrl+shift+6", "id": "" },
+        { "keys": "ctrl+shift+tab", "id": "" },
+        { "keys": "ctrl+shift+d", "id": "" },
+        { "keys": "alt+shift+minus", "id": "" },
+        { "keys": "alt+space", "id": "" },
+        { "keys": "alt+shift+plus", "id": "" },
+        { "keys": "ctrl+numpad_plus", "id": "" },
+        { "keys": "ctrl+shift+4", "id": "" },
+        { "keys": "ctrl+shift+t", "id": "" },
+        { "keys": "alt+down", "id": "" },
+        { "keys": "alt+left", "id": "" },
+        { "keys": "ctrl+alt+left", "id": "" },
+        { "keys": "alt+up", "id": "" },
+        { "keys": "ctrl+shift+1", "id": "" },
+        { "keys": "ctrl+shift+comma", "id": "" },
+        { "keys": "ctrl+shift+5", "id": "" },
+        { "keys": "ctrl+shift+2", "id": "" },
+        { "keys": "ctrl+shift+3", "id": "" },
+        { "keys": "ctrl+shift+7", "id": "" },
+        { "keys": "ctrl+shift+8", "id": "" },
+        { "keys": "ctrl+shift+9", "id": "" },
+        { "keys": "alt+shift+down", "id": "" },
+        { "keys": "ctrl+tab", "id": "" },
+        { "keys": "ctrl+shift+pgdn", "id": "" },
+        { "keys": "ctrl+numpad0", "id": "" },
+        { "keys": "ctrl+shift+period", "id": "" },
+        { "keys": "shift+insert", "id": "" },
+        { "keys": "ctrl+alt+1", "id": "" },
+        { "keys": "alt+shift+left", "id": "" },
+        { "keys": "ctrl+alt+5", "id": "" },
+        { "keys": "alt+shift+right", "id": "" },
+        { "keys": "alt+shift+up", "id": "" },
+        { "keys": "menu", "id": "" },
+        { "keys": "ctrl+shift+a", "id": "" },
+        { "keys": "win+sc(41)", "id": "" },
+        { "keys": "ctrl+alt+9", "id": "" },
+        { "keys": "ctrl+alt+2", "id": "" },
+        { "keys": "ctrl+alt+3", "id": "" },
+        { "keys": "ctrl+alt+7", "id": "" },
+        { "keys": "ctrl+alt+4", "id": "" },
+        { "keys": "ctrl+alt+6", "id": "" },
+        { "keys": "ctrl+alt+8", "id": "" },
+        { "keys": "alt+enter", "id": "" },
+        { "keys": "ctrl+shift+m", "id": "" },
+        { "keys": "ctrl+shift+space", "id": "" },
+        { "keys": "ctrl+alt+comma", "id": "" }
+    ],
+    "language": "en-US",
+    "launchMode": "default",
+    "profiles":
+    {
+        "defaults":
+        {
+            "colorScheme": "Oblivion",
+            "font":
+            {
+                "cellHeight": "1.25",
+                "face": "CommitMono Nerd Font",
+                "size": 12
+            },
+            "padding": "5",
+            "scrollbarState": "always"
+        },
+        "list":
+        [
+            {
+                "commandline": "pwsh.exe -Interactive -NoLogo",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "icon": "\ue756",
+                "name": "PowerShell"
+            }
+        ]
+    },
+    "schemes":
+    [
+        {
+            "name": "Oblivion",
+
+            "background": "#0D0D0D",
+            "foreground": "#FFFFFF",
+
+            "selectionBackground": "#1E90FF",
+
+            "cursorColor": "#BBBBBB",
+
+            "black": "#000000",
+            "brightBlack": "#1A1A1A",
+
+            "blue": "#337FFF",
+            "brightBlue": "#649EFF",
+
+            "cyan": "#33EEFF",
+            "brightCyan": "#64F2FF",
+
+            "green": "#33FF66",
+            "brightGreen": "#64FF8B",
+
+            "purple": "#FF44CC",
+            "brightPurple": "#FF78DA",
+
+            "red": "#FF3344",
+            "brightRed": "#FF6471",
+
+            "white": "#F2F2F2",
+            "brightWhite": "#FFFFFF",
+
+            "yellow": "#FFFF33",
+            "brightYellow": "#FFFF5E"
+        }
+    ],
+    "showTabsInTitlebar": false,
+    "showTerminalTitleInTitlebar": false
+}
